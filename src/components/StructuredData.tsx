@@ -16,7 +16,7 @@ export default function StructuredData() {
         telephone: '+1-708-730-2617',
         employee: {
           '@type': 'Person',
-          name: 'Believe Pessar',
+          name: 'Mr. Believe Pessar',
           jobTitle: 'Realtor',
           telephone: '+1-708-730-2617',
         },

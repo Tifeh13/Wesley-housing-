@@ -104,7 +104,7 @@ export default function Contact() {
                 </dl>
 
                 <p className="mt-7 border-t border-navy-900/8 pt-5 text-xs leading-relaxed text-charcoal/50 italic">
-                  For the fastest response, please call {SITE.phoneDisplay}. Mr. Pessar answers
+                  For the fastest response, please call {SITE.phoneDisplay}. Mr. Believe Pessar answers
                   inquiries personally.
                 </p>
               </div>

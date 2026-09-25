@@ -239,7 +239,7 @@ export default function Home() {
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 <ButtonLink to="/contact" variant="gold" size="lg">
-                  Talk to Mr. Believe
+                  Talk to Mr. Believe Pessar
                 </ButtonLink>
                 <ButtonA href={SITE.phoneHref} variant="outline-light" size="lg">
                   <PhoneIcon className="w-4 h-4" />

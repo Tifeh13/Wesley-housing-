@@ -229,7 +229,7 @@ export default function About() {
               </dl>
               <div className="mt-8 flex flex-wrap gap-4">
                 <ButtonLink to="/contact" variant="gold" size="lg">
-                  Talk to Mr. Believe
+                  Talk to Mr. Believe Pessar
                 </ButtonLink>
                 <ButtonA href={SITE.phoneHref} variant="outline-light" size="lg">
                   <PhoneIcon className="w-4 h-4" />
