@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Fraunces", "Georgia", "Times New Roman", serif;
+
+  /* Brand palette — deep navy, warm ivory, soft gold */
+  --color-navy-950: #0a1626;
+  --color-navy-900: #0e1d30;
+  --color-navy-800: #15293f;
+  --color-navy-700: #1d3450;
+  --color-navy-600: #2a415c;
+  --color-navy-300: #8ba3bd;
+  --color-navy-200: #b7c6d8;
+  --color-navy-100: #d9e2ec;
+
+  --color-gold-300: #ddc393;
+  --color-gold-400: #c8a25c;
+  --color-gold-500: #b08c46;
+  --color-gold-600: #8f7038;
+
+  --color-ivory: #f7f4ee;
+  --color-ivory-100: #efeadf;
+  --color-ivory-200: #e4ddcf;
+
+  --color-charcoal: #262b33;
+  --color-ink: #10141a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory text-charcoal font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c8a25c;
+  color: #0e1d30;
+}
+
+/* Refined focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes kenBurns {
+  0% {
+    transform: scale(1.06) translateY(0);
+  }
+  100% {
+    transform: scale(1.16) translateY(-2%);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.hero-zoom {
+  animation: heroZoom 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.ken-burns {
+  animation: kenBurns 22s ease-in-out infinite alternate;
+}
+
+/* Frosted light bar / panel used on hero + nav */
+.frost {
+  background: color-mix(in srgb, #f7f4ee 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.frost-dark {
+  background: color-mix(in srgb, #0e1d30 72%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+  .hero-zoom,
+  .ken-burns {
+    animation: none;
+  }
+}
+
+/* Elegant thin scrollbar for filter rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
